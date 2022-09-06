@@ -10,9 +10,11 @@ var characterTypes = " ";
 
 
 function generatePassword(){
+  //asks user series of questions to create their unique password
   var passwordLength = (prompt("Please select how many characters you would like in your password. From 8 to 128 characters."));
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert ("That is not a number between 8 - 128. Please try again.")
+    //length of password
 } else if (passwordLength >= 8 && passwordLength <= 128){
   var confirmLowerCase = confirm("Would you like lower case letters in your password?");
   var confirmUpperCase = confirm("Would you like upper case letters in your password?");
@@ -30,7 +32,7 @@ function generatePassword(){
 }if (confirmSpecial === true) {
   characterTypes = characterTypes.concat(special);
 } 
-
+//creating users password with the amount of characters selected
 var passwordText = " "
 for (var i = 0; i < passwordLength; i++) {
  passwordText = passwordText + characterTypes[Math.floor(Math.random() * characterTypes.length)];
