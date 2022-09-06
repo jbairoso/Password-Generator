@@ -18,6 +18,23 @@ function generatePassword(){
   var confirmNumbers = confirm("Would you like numbers in your password?");
   var confirmSpecial = confirm("Would you like special characters in you password?")
 
+}if (confirmLowerCase === false && confirmUpperCase === false && confirmNumbers === false && confirmSpecialCharacters === false) {
+  alert("You must pick at least one character type.");
+}if (confirmLowerCase === true) {
+  characterTypes = characterTypes.concat(lowerCase);
+}if (confirmUpperCase === true) {
+  characterTypes = characterTypes.concat(upperCase);
+}if (confirmNumbers === true) {
+  characterTypes = characterTypes.concat(numbers);
+}if (confirmSpecial === true) {
+  characterTypes = characterTypes.concat(special);
+} 
+
+ var passwordText = " "
+ for (var i = 0; i < passwordLength; i++) {
+  passwordText = passwordText + characterTypes[Math.floor(Math.random() * characterTypes.length)];
+} return passwordText; 
+
 }
 
 // Write password to the #password input
