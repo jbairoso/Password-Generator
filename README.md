@@ -23,7 +23,7 @@
 * THEN the password is either displayed in an alert or written to the page
 
 ## Deployed Page
-
+https://jbairoso.github.io/Password-Generator/
 ## Mock up
 ![Screenshot](/assets/images/Password-Generator.png)
 
