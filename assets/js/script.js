@@ -23,6 +23,7 @@ function generatePassword(){
 
 }if (confirmLowerCase === false && confirmUpperCase === false && confirmNumbers === false && confirmSpecialCharacters === false) {
   alert("You must pick at least one character type.");
+  //combination of multi strings
 }if (confirmLowerCase === true) {
   characterTypes = characterTypes.concat(LowerCase);
 }if (confirmUpperCase === true) {
